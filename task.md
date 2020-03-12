@@ -1,32 +1,58 @@
-# Task 3 - Auto merge
+# Task 4.3 - Fix conflict (3)
 
 ## Discuss About Previous Task
 
-After this task, your log will be like the follow:
+After commit the change, your log will be like the follow:
 
 ```
-* (HEAD -> feature1) Task 2
+* (HEAD -> feature2) Task 4.2
 |
 |
-* (master) Task 1
+* Task 4.1
+|
+|
+* (master, feature1) Task 3
+|
+|
+*  Task 2
+|
+|
+*  Task 1
 ```
 
-You create a node "Task 2". And this node is located "feature1" branch
+After checkout to "master" branch:
+
+```
+* (feature2) Task 4.2
+|
+|
+* Task 4.1
+|
+|
+* (HEAD -> master, feature1) Task 3
+|
+|
+*  Task 2
+|
+|
+*  Task 1
+```
+
+Note that you can't see "Task 4.1" and "Task 4.2" if you use the command `git log`.
+
+Because `git log` only show all history until HEAD
+
+If you want to see all branches, use `--all` option.
 
 ## Description
 
-If you complete all issues at a branch, you can merge this branch to master branch.
+You should commit current change to "master". Then, we create a condition which will cause confilct.
 
-If there is no conflict, it will merge automatically. Otherwise, you should solve the conflict and commit.
-
-Now, you should merge current branch to master branch.
+Merge "feature2" branch and solve it.
 
 ## Steps
 
-1. Commit current change
-2. Merge this branch to "master"
-
-## Hint
-
-- `git checkout`
-- `git merge`
+1. Commit current change to branch "master"
+2. Merge branch "feature2" to branch "master"
+3. Solve conflict (Remove content of task 4.2)
+4. Commit after solve confict
