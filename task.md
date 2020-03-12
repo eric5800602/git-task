@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Task 4.3 - Fix conflict (3)
 
 ## Discuss About Previous Task
@@ -5,14 +6,7 @@
 After commit the change, your log will be like the follow:
 
 ```
-<<<<<<< HEAD
 * (HEAD -> feature2) Task 4.2
-=======
-* (HEAD -> feature1) Task 3
-|
-|
-*  Task 2
->>>>>>> Commit for feature2 merge conflict
 |
 |
 * Task 4.1
@@ -71,6 +65,19 @@ After merge, your log will be like the follow:
 
 ```
 * (HEAD -> master, feature1) Task 3
+=======
+# Task 4.2 - Fix conflict (2)
+
+## Discuss About Previous Task
+
+After you done previous task, your log will be like the follow:
+
+```
+* (HEAD -> feature2) Task 4.1
+|
+|
+* (master, feature1) Task 3
+>>>>>>> Commit for merge conflict
 |
 |
 *  Task 2
@@ -79,16 +86,19 @@ After merge, your log will be like the follow:
 *  Task 1
 ```
 
-Because "feature1" branch is based on "master" branch, the process of merging is just moving "master" to HEAD. And we call this process "fast forward".
+I hope you understand your log now.
 
 ## Description
 
-Previous section show the condition when no conflict should be solved. Now, you should try to solve conflict.
-
-Before solve conflict, we will create a condition that will cause conflict when merge branch.
+Just checkout to "master" branch.
 
 ## Steps
 
+<<<<<<< HEAD
 1. Checkout to a new branch named "feature2"
 2. Commit current change to branch "feature2"
 >>>>>>> Commit for feature2 merge conflict
+=======
+1. Commit current change to branch "feature2"
+2. Checkout to branch "master"
+>>>>>>> Commit for merge conflict
