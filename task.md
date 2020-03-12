@@ -1,18 +1,46 @@
-<<<<<<< HEAD
-# Task 4.3 - Fix conflict (3)
+# Task 5 - Revert
 
 ## Discuss About Previous Task
 
-After commit the change, your log will be like the follow:
+After commit change to "master" branch, your log will be like the follow:
 
 ```
-* (HEAD -> feature2) Task 4.2
+* (HEAD -> master) Task 4.3
 |
+<<<<<<< HEAD
 |
 * Task 4.1
 |
 |
 * (master, feature1) Task 3
+=======
+| * (feature2) Task 4.2
+| |
+| * Task 4.1
+|/
+* (feature1) Task 3
+>>>>>>> Commit for revert
+|
+|
+*  Task 2
+|
+|
+*  Task 1
+```
+
+Because you commit a change to "master" branch, the history has two branches.
+
+After merge and commit, your log will be like the follow:
+
+```
+* (HEAD -> master) Merge branch 'feature2'
+|\
+| * (feature2) Task 4.2
+| |
+| * Task 4.1
+* | Task 4.3
+|/
+* (feature1) Task 3
 |
 |
 *  Task 2
@@ -22,24 +50,6 @@ After commit the change, your log will be like the follow:
 ```
 
 <<<<<<< HEAD
-After checkout to "master" branch:
-
-```
-* (feature2) Task 4.2
-|
-|
-* Task 4.1
-|
-|
-* (HEAD -> master, feature1) Task 3
-|
-|
-*  Task 2
-|
-|
-*  Task 1
-```
-
 Note that you can't see "Task 4.1" and "Task 4.2" if you use the command `git log`.
 
 Because `git log` only show all history until HEAD
@@ -102,3 +112,20 @@ Just checkout to "master" branch.
 1. Commit current change to branch "feature2"
 2. Checkout to branch "master"
 >>>>>>> Commit for merge conflict
+=======
+It will generate "Merge branch 'feature2'" automatically.
+
+
+## Description
+
+Now, this task is relatively easy. You just commit current change and revert the commit.
+
+## Steps
+
+1. Commit current change
+2. Revert to previous commit
+
+## Hint
+
+- `git revert`
+>>>>>>> Commit for revert
