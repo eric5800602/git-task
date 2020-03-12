@@ -1,16 +1,27 @@
-# Task 1 - Commit
+# Task 2 - Checkout
+
+## Discuss About Previous Task
+
+After this task, your log will be like the follow:
+
+```
+* (HEAD -> master) Task 1
+```
+
+HEAD means your current position, and master means your current branch.
 
 ## Description
 
-Commit is a basic command in git. It can save you change and create a node. Each node means a version of your project.
+Checkout is a common command in git. You can use this command to check previous commit or go to other branch.
 
-Please commit current change.
+Now, you should create a new branch and go to that branch.
 
 ## Steps
 
-1. Commit current change
+1. Checkout to new branch named "feature1"
+2. And then commit current change to branch "feature1"
 
 ## Hint
 
-- `git add`
-- `git commit`
+- `git branch`
+- `git checkout`
